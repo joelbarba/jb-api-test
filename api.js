@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
       return {
         statusCode: 200,
         // body: JSON.stringify(data),
-        body: 'YES',
+        body: 'MIN-' + ((new Date()).getMinutes() % 3),
       };
     } catch (error) {
       // Return an error response if there was an issue processing the request
